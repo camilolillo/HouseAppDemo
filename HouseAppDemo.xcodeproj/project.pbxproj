@@ -188,6 +188,7 @@
 		9A6EAED52CCECEB00005DC17 /* HouseAppDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9A6EAF8A2CCF03A70005DC17 /* New Group */,
 				9A6EAF882CCF01700005DC17 /* GoogleService-Info.plist */,
 				9A6EAECE2CCECEB00005DC17 /* Info.plist */,
 				9A6EAECC2CCECEB00005DC17 /* AppDelegate.swift */,
@@ -363,6 +364,13 @@
 				9A6EAF822CCEFB0B0005DC17 /* LoginWireframe.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		9A6EAF8A2CCF03A70005DC17 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

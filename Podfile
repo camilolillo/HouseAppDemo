@@ -7,4 +7,6 @@ target 'HouseAppDemo' do
 
   # Pods for HouseAppDemo
   pod 'Alamofire'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 end
