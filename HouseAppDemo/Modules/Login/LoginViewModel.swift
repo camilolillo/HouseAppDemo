@@ -11,5 +11,12 @@ final class LoginViewModel {
     weak var delegate: LoginDelegate?
 }
 
-extension LoginViewModel: LoginViewModelProtocol { }
+extension LoginViewModel: LoginViewModelProtocol {
+    func onLoginButtonPressed() {
+        //TODO
+    }
+    func onRegisterButtonPressed() {
+        delegate?.onRegisterModuleRequested()
+    }
+}
 

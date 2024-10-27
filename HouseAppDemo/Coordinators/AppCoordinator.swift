@@ -30,3 +30,10 @@ extension AppCoordinator: LoginModuleRequestable {
         navigationController.pushViewController(vc, animated: true)
     }
 }
+
+extension AppCoordinator: RegisterModuleRequestable {
+    func onRegisterModuleRequested() {
+        let vc = RegisterWireframe.createModule(with: self)
+        navigationController.present(vc, animated: true)
+    }
+}

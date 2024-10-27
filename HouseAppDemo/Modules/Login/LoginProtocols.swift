@@ -3,10 +3,11 @@
 //  Created on 27-10-24.
 //
 
-
 import Foundation
 
 protocol LoginViewProtocol: AnyObject { }
 
-protocol LoginViewModelProtocol: ViewLifecycleable { }
-
+protocol LoginViewModelProtocol: ViewLifecycleable {
+    func onLoginButtonPressed()
+    func onRegisterButtonPressed()
+}

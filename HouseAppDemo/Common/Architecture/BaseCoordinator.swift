@@ -12,11 +12,7 @@ class BaseCoordinator: NSObject, Coordinator, BaseCoordinatorParent, BaseModuleD
         self.navigationController = navigationController()
     }
 
-    private var _childCoordinators: [Coordinator] = [] {
-        didSet {
-            print("\n\(Self.self).\(#function): \(_childCoordinators)\n")
-        }
-    }
+    private var _childCoordinators: [Coordinator] = [] 
 
     private var childCoordinators: [Coordinator] {
         get { queue.sync { self._childCoordinators } }
@@ -37,7 +33,6 @@ class BaseCoordinator: NSObject, Coordinator, BaseCoordinatorParent, BaseModuleD
     /// By default it removes the received coordinator from child coordinators.
     /// - parameter coordinator: Coordinator that performed the current onProcessDone method call
     func onProcessDone(by coordinator: some Coordinator) {
-        print("\n\(Self.self).\(#function) coordinator: \(coordinator)")
         removeChild(coordinator: coordinator)
     }
 
@@ -54,24 +49,20 @@ class BaseCoordinator: NSObject, Coordinator, BaseCoordinatorParent, BaseModuleD
 extension BaseCoordinator {
     func addChild(coordinator: some Coordinator) {
         removeChild(coordinator: coordinator)
-        print("\n\(Self.self).\(#function) coordinator: \(coordinator))")
         childCoordinators.append(coordinator)
     }
 
     func addChildAndStart(coordinator: some Coordinator) {
-        print("\n\(Self.self).\(#function) coordinator: \(coordinator))")
         addChild(coordinator: coordinator)
         coordinator.start()
     }
 
     func getChild<T>(of type: T.Type) -> T? where T: Coordinator {
-        print("\n\(Self.self).\(#function) type: \(type))")
         return childCoordinators.getFirst(of: T.self)
     }
 
     func removeChild<T>(coordinator: T) where T: Coordinator {
         guard childCoordinators.contains(where: { $0 is T }) else { return }
-        print("\n\(Self.self).\(#function) coordinator: \(coordinator))")
         childCoordinators.removeAll(of: T.self)
     }
 }
