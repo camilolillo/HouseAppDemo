@@ -16,9 +16,20 @@ final class AppCoordinator: BaseCoordinator {
         }
     }
     
+    private var presentedViewController: UIViewController? {
+        didSet {
+            guard let presentedViewController else { return }
+            navigationController.present(presentedViewController, animated: true)
+        }
+    }
+    
     override func start() {
         let vc = SplashWireframe.createModule(with: self)
         navigationController.setViewControllers([vc], animated: true)
+    }
+    
+    override func onDismissRequested() {
+        presentedViewController?.dismiss(animated: true)
     }
     
 }
@@ -34,6 +45,6 @@ extension AppCoordinator: LoginModuleRequestable {
 extension AppCoordinator: RegisterModuleRequestable {
     func onRegisterModuleRequested() {
         let vc = RegisterWireframe.createModule(with: self)
-        navigationController.present(vc, animated: true)
+        self.presentedViewController = vc
     }
 }

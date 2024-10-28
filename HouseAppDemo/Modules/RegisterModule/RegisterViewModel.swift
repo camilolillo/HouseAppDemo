@@ -73,7 +73,7 @@ extension RegisterViewModel {
             if success {
                 self.onSuccessMessageChange?("Registro exitoso")
                 self.onSuccessAction = {
-                    print("Acción de éxito manejada")
+                    self.delegate?.onDismissRequested()
                 }
             } else {
                 self.onErrorMessageChange?(message)
