@@ -1,7 +1,7 @@
 import UIKit
 
 final class LoginViewController: BaseViewController {
-    var viewModel: LoginViewModelProtocol?
+    var viewModel: LoginViewModel?
     
     private lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
@@ -29,7 +29,6 @@ final class LoginViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel?.onViewDidLoad()
         setupUI()
         setupConstraints()
     }
@@ -46,19 +45,18 @@ extension LoginViewController {
             registerButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 32),
             registerButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
             registerButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32),
-            registerButton.heightAnchor.constraint(equalToConstant: 50),
+            registerButton.heightAnchor.constraint(equalToConstant: 44),
             
             loginButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 32),
             loginButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -32),
             loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor, constant: -16),
-            loginButton.heightAnchor.constraint(equalToConstant: 50)
+            loginButton.heightAnchor.constraint(equalToConstant: 44)
         ])
     }
 }
 
 extension LoginViewController {
     @objc private func onLoginButtonPressed() {
-        // Acción cuando se presiona el botón de login
         print("Login button pressed")
     }
 
@@ -66,5 +64,3 @@ extension LoginViewController {
         viewModel?.onRegisterButtonPressed()
     }
 }
-
-extension LoginViewController: LoginViewProtocol { }

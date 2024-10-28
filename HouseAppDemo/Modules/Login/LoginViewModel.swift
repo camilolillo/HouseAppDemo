@@ -7,11 +7,11 @@
 import Foundation
 
 final class LoginViewModel {
-    weak var view: LoginViewProtocol?
+    weak var view: LoginViewController?
     weak var delegate: LoginDelegate?
 }
 
-extension LoginViewModel: LoginViewModelProtocol {
+extension LoginViewModel {
     func onLoginButtonPressed() {
         //TODO
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 final class SplashViewModel {
-    weak var view: SplashViewProtocol?
+    weak var view: SplashViewController?
     weak var delegate: SplashDelegate?
 }
 
@@ -17,5 +17,3 @@ extension SplashViewModel {
         delegate?.onLoginModuleRequested()
     }
 }
-
-extension SplashViewModel: SplashViewModelProtocol { }

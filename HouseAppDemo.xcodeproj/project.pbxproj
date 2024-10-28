@@ -57,14 +57,11 @@
 		9A6EAF4A2CCEE9330005DC17 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF492CCEE9330005DC17 /* SplashViewController.swift */; };
 		9A6EAF4E2CCEE94C0005DC17 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF4D2CCEE94C0005DC17 /* SplashViewModel.swift */; };
 		9A6EAF502CCEE9590005DC17 /* SplashWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF4F2CCEE9590005DC17 /* SplashWireframe.swift */; };
-		9A6EAF572CCEEB350005DC17 /* SplashProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF562CCEEB350005DC17 /* SplashProtocols.swift */; };
-		9A6EAF5A2CCEF2460005DC17 /* RegisterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF592CCEF2460005DC17 /* RegisterProtocols.swift */; };
 		9A6EAF5C2CCEF2740005DC17 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF5B2CCEF2740005DC17 /* RegisterViewController.swift */; };
 		9A6EAF5E2CCEF32A0005DC17 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF5D2CCEF32A0005DC17 /* RegisterViewModel.swift */; };
 		9A6EAF602CCEF3750005DC17 /* RegisterWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF5F2CCEF3750005DC17 /* RegisterWireframe.swift */; };
 		9A6EAF7E2CCEF9E40005DC17 /* LoginModuleRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF7D2CCEF9E40005DC17 /* LoginModuleRequestable.swift */; };
 		9A6EAF842CCEFB0B0005DC17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF802CCEFB0B0005DC17 /* LoginViewController.swift */; };
-		9A6EAF852CCEFB0B0005DC17 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF7F2CCEFB0B0005DC17 /* LoginProtocols.swift */; };
 		9A6EAF862CCEFB0B0005DC17 /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF822CCEFB0B0005DC17 /* LoginWireframe.swift */; };
 		9A6EAF872CCEFB0B0005DC17 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF812CCEFB0B0005DC17 /* LoginViewModel.swift */; };
 		9A6EAF892CCF01700005DC17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A6EAF882CCF01700005DC17 /* GoogleService-Info.plist */; };
@@ -125,13 +122,10 @@
 		9A6EAF492CCEE9330005DC17 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		9A6EAF4D2CCEE94C0005DC17 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		9A6EAF4F2CCEE9590005DC17 /* SplashWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashWireframe.swift; sourceTree = "<group>"; };
-		9A6EAF562CCEEB350005DC17 /* SplashProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashProtocols.swift; sourceTree = "<group>"; };
-		9A6EAF592CCEF2460005DC17 /* RegisterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocols.swift; sourceTree = "<group>"; };
 		9A6EAF5B2CCEF2740005DC17 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9A6EAF5D2CCEF32A0005DC17 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		9A6EAF5F2CCEF3750005DC17 /* RegisterWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWireframe.swift; sourceTree = "<group>"; };
 		9A6EAF7D2CCEF9E40005DC17 /* LoginModuleRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleRequestable.swift; sourceTree = "<group>"; };
-		9A6EAF7F2CCEFB0B0005DC17 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		9A6EAF802CCEFB0B0005DC17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9A6EAF812CCEFB0B0005DC17 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9A6EAF822CCEFB0B0005DC17 /* LoginWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
@@ -324,7 +318,6 @@
 		9A6EAF452CCEE8F70005DC17 /* SplashModule */ = {
 			isa = PBXGroup;
 			children = (
-				9A6EAF562CCEEB350005DC17 /* SplashProtocols.swift */,
 				9A6EAF492CCEE9330005DC17 /* SplashViewController.swift */,
 				9A6EAF4D2CCEE94C0005DC17 /* SplashViewModel.swift */,
 				9A6EAF4F2CCEE9590005DC17 /* SplashWireframe.swift */,
@@ -354,7 +347,6 @@
 		9A6EAF582CCEF1FE0005DC17 /* RegisterModule */ = {
 			isa = PBXGroup;
 			children = (
-				9A6EAF592CCEF2460005DC17 /* RegisterProtocols.swift */,
 				9A6EAF5B2CCEF2740005DC17 /* RegisterViewController.swift */,
 				9A6EAF5D2CCEF32A0005DC17 /* RegisterViewModel.swift */,
 				9A6EAF5F2CCEF3750005DC17 /* RegisterWireframe.swift */,
@@ -365,7 +357,6 @@
 		9A6EAF832CCEFB0B0005DC17 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				9A6EAF7F2CCEFB0B0005DC17 /* LoginProtocols.swift */,
 				9A6EAF802CCEFB0B0005DC17 /* LoginViewController.swift */,
 				9A6EAF812CCEFB0B0005DC17 /* LoginViewModel.swift */,
 				9A6EAF822CCEFB0B0005DC17 /* LoginWireframe.swift */,
@@ -497,10 +488,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A6EAF842CCEFB0B0005DC17 /* LoginViewController.swift in Sources */,
-				9A6EAF852CCEFB0B0005DC17 /* LoginProtocols.swift in Sources */,
 				9A6EAF862CCEFB0B0005DC17 /* LoginWireframe.swift in Sources */,
 				9A6EAF872CCEFB0B0005DC17 /* LoginViewModel.swift in Sources */,
-				9A6EAF572CCEEB350005DC17 /* SplashProtocols.swift in Sources */,
 				9A6EAF0B2CCED0170005DC17 /* UICollectionView+Register.swift in Sources */,
 				9A6EAF0C2CCED0170005DC17 /* BaseCoordinator.swift in Sources */,
 				9A6EAF0D2CCED0170005DC17 /* CollectionViewDataSource.swift in Sources */,
@@ -546,7 +535,6 @@
 				9A6EAF2B2CCED0170005DC17 /* ScreenSizeMeasurable.swift in Sources */,
 				9A6EAF2C2CCED0170005DC17 /* BaseCell.swift in Sources */,
 				9A6EAF3B2CCED01E0005DC17 /* AppRouter.swift in Sources */,
-				9A6EAF5A2CCEF2460005DC17 /* RegisterProtocols.swift in Sources */,
 				9A6EAF3C2CCED01E0005DC17 /* HTTPService.swift in Sources */,
 				9A6EAF402CCED01E0005DC17 /* AppEnvironment.swift in Sources */,
 				9A6EAF2D2CCED0170005DC17 /* Stringable.swift in Sources */,
