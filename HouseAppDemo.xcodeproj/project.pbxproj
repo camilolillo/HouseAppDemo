@@ -68,6 +68,7 @@
 		9A6EAF8D2CCF04610005DC17 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF8C2CCF04610005DC17 /* LoginUseCase.swift */; };
 		9A6EAF8F2CCF048D0005DC17 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF8E2CCF048D0005DC17 /* RegisterUseCase.swift */; };
 		9A6EAF912CCF08200005DC17 /* RegisterModuleRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF902CCF08200005DC17 /* RegisterModuleRequestable.swift */; };
+		9AEFD2622CCFC35100FC60BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFD2612CCFC34F00FC60BD /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +134,7 @@
 		9A6EAF8C2CCF04610005DC17 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		9A6EAF8E2CCF048D0005DC17 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
 		9A6EAF902CCF08200005DC17 /* RegisterModuleRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModuleRequestable.swift; sourceTree = "<group>"; };
+		9AEFD2612CCFC34F00FC60BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E560B218A05C70AA4D381DA8 /* Pods_HouseAppDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HouseAppDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA4C66549376B502562D52D /* Pods-HouseAppDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouseAppDemo.release.xcconfig"; path = "Target Support Files/Pods-HouseAppDemo/Pods-HouseAppDemo.release.xcconfig"; sourceTree = "<group>"; };
 		EDDB6C059DD10654DB0C362A /* Pods-HouseAppDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouseAppDemo.debug.xcconfig"; path = "Target Support Files/Pods-HouseAppDemo/Pods-HouseAppDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				9A6EAECD2CCECEB00005DC17 /* Assets.xcassets */,
 				9A6EAF0A2CCED0170005DC17 /* Common */,
 				9A6EAF432CCED0B10005DC17 /* Coordinators */,
+				9AEFD2602CCFC34200FC60BD /* Model */,
 				9A6EAF512CCEE9E60005DC17 /* ModuleDelegates */,
 				9A6EAF462CCEE9050005DC17 /* Modules */,
 				9A6EAF3A2CCED01E0005DC17 /* Network */,
@@ -220,7 +223,6 @@
 				9A6EAEE42CCED0170005DC17 /* Array+Coordinator.swift */,
 				9A6EAEE52CCED0170005DC17 /* Optional+IsNill.swift */,
 				9A6EAEE62CCED0170005DC17 /* Optional+isNotNill.swift */,
-				9A6EAEE72CCED0170005DC17 /* String+Constants.swift */,
 				9A6EAEE82CCED0170005DC17 /* UIApplication+KeyWindow.swift */,
 				9A6EAEE92CCED0170005DC17 /* UIApplication+TopMostViewController.swift */,
 				9A6EAEEA2CCED0170005DC17 /* UICollectionReusableView+ReuseIdentifier.swift */,
@@ -285,6 +287,7 @@
 		9A6EAF0A2CCED0170005DC17 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9A6EAEE72CCED0170005DC17 /* String+Constants.swift */,
 				9A6EAEDD2CCED0170005DC17 /* BaseClient.swift */,
 				9A6EAEDE2CCED0170005DC17 /* TypeAliasses.swift */,
 				9A6EAEE32CCED0170005DC17 /* Architecture */,
@@ -371,6 +374,14 @@
 				9A6EAF8E2CCF048D0005DC17 /* RegisterUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		9AEFD2602CCFC34200FC60BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9AEFD2612CCFC34F00FC60BD /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,6 +523,7 @@
 				9A6EAF192CCED0170005DC17 /* BaseCoordinatorParent.swift in Sources */,
 				9A6EAF7E2CCEF9E40005DC17 /* LoginModuleRequestable.swift in Sources */,
 				9A6EAF1A2CCED0170005DC17 /* ParametersConvertible.swift in Sources */,
+				9AEFD2622CCFC35100FC60BD /* User.swift in Sources */,
 				9A6EAF602CCEF3750005DC17 /* RegisterWireframe.swift in Sources */,
 				9A6EAF1B2CCED0170005DC17 /* UIViewController+DismissPresentedViewController.swift in Sources */,
 				9A6EAF1C2CCED0170005DC17 /* CollectionViewSizeable.swift in Sources */,

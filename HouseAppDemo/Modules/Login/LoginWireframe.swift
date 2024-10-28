@@ -10,8 +10,9 @@ typealias LoginDelegate = BaseModuleDelegate & RegisterModuleRequestable
 
 enum LoginWireframe {
     static func createModule(with delegate: LoginDelegate) -> UIViewController {
+        let loginUserUseCase = LoginUserUseCase()
         let view = LoginViewController()
-        let viewModel = LoginViewModel()
+        let viewModel = LoginViewModel(loginUserUseCase: loginUserUseCase)
         
         view.viewModel = viewModel
         viewModel.view = view

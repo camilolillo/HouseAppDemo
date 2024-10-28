@@ -14,7 +14,7 @@ final class RegisterViewController: BaseViewController {
     private lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "Email"
+        textField.placeholder = .emailPlaceholder
         textField.borderStyle = .roundedRect
         textField.keyboardType = .emailAddress
         textField.autocapitalizationType = .none
@@ -26,7 +26,7 @@ final class RegisterViewController: BaseViewController {
     private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "Password"
+        textField.placeholder = .passwordPlaceholder
         textField.borderStyle = .roundedRect
         textField.isSecureTextEntry = true
         textField.addTarget(self, action: #selector(onPasswordChanged(_:)), for: .editingChanged)
@@ -36,7 +36,7 @@ final class RegisterViewController: BaseViewController {
     private lazy var confirmPasswordTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "Confirm Password"
+        textField.placeholder = .confirmPasswordPlaceholder
         textField.borderStyle = .roundedRect
         textField.isSecureTextEntry = true
         textField.addTarget(self, action: #selector(onConfirmPasswordChanged(_:)), for: .editingChanged)
@@ -46,7 +46,7 @@ final class RegisterViewController: BaseViewController {
     private lazy var registerButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Register", for: .normal)
+        button.setTitle(.registerButtonTitle, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 8
@@ -132,10 +132,10 @@ extension RegisterViewController {
     
     private func updateButtonState(isLoading: Bool) {
         if isLoading {
-            registerButton.setTitle("", for: .normal)
+            registerButton.setTitle(.empty, for: .normal)
             activityIndicator.startAnimating()
         } else {
-            registerButton.setTitle("Register", for: .normal)
+            registerButton.setTitle(.registerButtonTitle, for: .normal)
             activityIndicator.stopAnimating()
         }
     }
@@ -146,12 +146,12 @@ extension RegisterViewController {
         viewModel?.onRegisterButtonPressed()
     }
     @objc private func onEmailChanged(_ textField: UITextField) {
-        viewModel?.onEmailChange?(textField.text ?? "")
+        viewModel?.onEmailChange?(textField.text ?? .empty)
     }
     @objc private func onPasswordChanged(_ textField: UITextField) {
-        viewModel?.onPasswordChange?(textField.text ?? "")
+        viewModel?.onPasswordChange?(textField.text ?? .empty)
     }
     @objc private func onConfirmPasswordChanged(_ textField: UITextField) {
-        viewModel?.onConfirmPasswordChange?(textField.text ?? "")
+        viewModel?.onConfirmPasswordChange?(textField.text ?? .empty)
     }
 }

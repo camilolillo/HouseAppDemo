@@ -59,24 +59,24 @@ extension RegisterViewModel {
             let email = registerForm.email, !email.isEmpty,
             let password = registerForm.password, !password.isEmpty,
             let confirmPassword = registerForm.confirmPassword, !confirmPassword.isEmpty else {
-                onErrorMessageChange?("Debes completar los campos")
+                onErrorMessageChange?(.completeFieldsMessage)
                 onLoadingStateChange?(false)
                 return
         }
         guard password.elementsEqual(confirmPassword) else {
-            onErrorMessageChange?("Las contraseñas no coinciden")
+            onErrorMessageChange?(.passwordsDoNotMatchMessage)
             onLoadingStateChange?(false)
             return
         }
         registerUserUseCase.execute(email: email, password: password) { success, message in
             self.onLoadingStateChange?(false)
             if success {
-                self.onSuccessMessageChange?("Registro exitoso")
+                self.onSuccessMessageChange?(.registrationSuccessMessage)
                 self.onSuccessAction = {
                     self.delegate?.onDismissRequested()
                 }
             } else {
-                self.onErrorMessageChange?(message)
+                self.onErrorMessageChange?(.defaultAlertTitle)
             }
         }
     }
