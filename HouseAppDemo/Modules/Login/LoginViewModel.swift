@@ -65,7 +65,7 @@ extension LoginViewModel {
             if success {
                 self?.onSuccessMessageChange?(.loginSuccessMessage)
                 self?.onLoginAction = {
-                    self?.delegate?.onDismissRequested()
+                    self?.delegate?.onRestartAppRequested()
                 }
             } else {
                 self?.onErrorMessageChange?(.loginErrorMessage)

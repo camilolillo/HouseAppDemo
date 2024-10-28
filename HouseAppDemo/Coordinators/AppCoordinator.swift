@@ -34,6 +34,13 @@ final class AppCoordinator: BaseCoordinator {
     
 }
 
+extension AppCoordinator: RestartAppRequestable {
+    func onRestartAppRequested() {
+        let vc = SplashWireframe.createModule(with: self)
+        navigationController.setViewControllers([vc], animated: true)
+    }
+}
+
 extension AppCoordinator: LoginModuleRequestable {
     func onLoginModuleRequested() {
         let vc = LoginWireframe.createModule(with: self)
@@ -46,5 +53,13 @@ extension AppCoordinator: RegisterModuleRequestable {
     func onRegisterModuleRequested() {
         let vc = RegisterWireframe.createModule(with: self)
         self.presentedViewController = vc
+    }
+}
+
+extension AppCoordinator: HomeModuleRequestable {
+    func onHomeModuleRequested(with user: User) {
+        let vc = HomeWireframe.createModule(with: user, with: self)
+        navigationController.setNavigationBarHidden(false, animated: false)
+        navigationController.setViewControllers([vc], animated: false)
     }
 }

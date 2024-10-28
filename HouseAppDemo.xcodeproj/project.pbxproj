@@ -69,6 +69,12 @@
 		9A6EAF8F2CCF048D0005DC17 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF8E2CCF048D0005DC17 /* RegisterUseCase.swift */; };
 		9A6EAF912CCF08200005DC17 /* RegisterModuleRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EAF902CCF08200005DC17 /* RegisterModuleRequestable.swift */; };
 		9AEFD2622CCFC35100FC60BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFD2612CCFC34F00FC60BD /* User.swift */; };
+		9AEFD2672CCFD9BF00FC60BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFD2632CCFD9BF00FC60BD /* HomeViewController.swift */; };
+		9AEFD2682CCFD9BF00FC60BD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFD2642CCFD9BF00FC60BD /* HomeViewModel.swift */; };
+		9AEFD2692CCFD9BF00FC60BD /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFD2652CCFD9BF00FC60BD /* HomeWireframe.swift */; };
+		9AEFD26B2CCFD9E800FC60BD /* HomeModuleRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFD26A2CCFD9E300FC60BD /* HomeModuleRequestable.swift */; };
+		9AEFD26D2CCFE0F900FC60BD /* SignOutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFD26C2CCFE0F300FC60BD /* SignOutUseCase.swift */; };
+		9AEFD26F2CCFE3BA00FC60BD /* SignOutRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFD26E2CCFE3B600FC60BD /* SignOutRequestable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +141,12 @@
 		9A6EAF8E2CCF048D0005DC17 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
 		9A6EAF902CCF08200005DC17 /* RegisterModuleRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModuleRequestable.swift; sourceTree = "<group>"; };
 		9AEFD2612CCFC34F00FC60BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9AEFD2632CCFD9BF00FC60BD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9AEFD2642CCFD9BF00FC60BD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9AEFD2652CCFD9BF00FC60BD /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		9AEFD26A2CCFD9E300FC60BD /* HomeModuleRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleRequestable.swift; sourceTree = "<group>"; };
+		9AEFD26C2CCFE0F300FC60BD /* SignOutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutUseCase.swift; sourceTree = "<group>"; };
+		9AEFD26E2CCFE3B600FC60BD /* SignOutRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutRequestable.swift; sourceTree = "<group>"; };
 		E560B218A05C70AA4D381DA8 /* Pods_HouseAppDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HouseAppDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA4C66549376B502562D52D /* Pods-HouseAppDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouseAppDemo.release.xcconfig"; path = "Target Support Files/Pods-HouseAppDemo/Pods-HouseAppDemo.release.xcconfig"; sourceTree = "<group>"; };
 		EDDB6C059DD10654DB0C362A /* Pods-HouseAppDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouseAppDemo.debug.xcconfig"; path = "Target Support Files/Pods-HouseAppDemo/Pods-HouseAppDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -331,6 +343,7 @@
 		9A6EAF462CCEE9050005DC17 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9AEFD2662CCFD9BF00FC60BD /* Home */,
 				9A6EAF832CCEFB0B0005DC17 /* Login */,
 				9A6EAF582CCEF1FE0005DC17 /* RegisterModule */,
 				9A6EAF452CCEE8F70005DC17 /* SplashModule */,
@@ -341,6 +354,8 @@
 		9A6EAF512CCEE9E60005DC17 /* ModuleDelegates */ = {
 			isa = PBXGroup;
 			children = (
+				9AEFD26E2CCFE3B600FC60BD /* SignOutRequestable.swift */,
+				9AEFD26A2CCFD9E300FC60BD /* HomeModuleRequestable.swift */,
 				9A6EAF7D2CCEF9E40005DC17 /* LoginModuleRequestable.swift */,
 				9A6EAF902CCF08200005DC17 /* RegisterModuleRequestable.swift */,
 			);
@@ -370,6 +385,7 @@
 		9A6EAF8B2CCF04330005DC17 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				9AEFD26C2CCFE0F300FC60BD /* SignOutUseCase.swift */,
 				9A6EAF8C2CCF04610005DC17 /* LoginUseCase.swift */,
 				9A6EAF8E2CCF048D0005DC17 /* RegisterUseCase.swift */,
 			);
@@ -382,6 +398,16 @@
 				9AEFD2612CCFC34F00FC60BD /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9AEFD2662CCFD9BF00FC60BD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9AEFD2632CCFD9BF00FC60BD /* HomeViewController.swift */,
+				9AEFD2642CCFD9BF00FC60BD /* HomeViewModel.swift */,
+				9AEFD2652CCFD9BF00FC60BD /* HomeWireframe.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -531,6 +557,8 @@
 				9A6EAF1E2CCED0170005DC17 /* UIApplication+KeyWindow.swift in Sources */,
 				9A6EAF1F2CCED0170005DC17 /* Endpoint.swift in Sources */,
 				9A6EAF202CCED0170005DC17 /* UICollectionReusableView+ReuseIdentifier.swift in Sources */,
+				9AEFD26D2CCFE0F900FC60BD /* SignOutUseCase.swift in Sources */,
+				9AEFD26B2CCFD9E800FC60BD /* HomeModuleRequestable.swift in Sources */,
 				9A6EAF212CCED0170005DC17 /* String+Constants.swift in Sources */,
 				9A6EAF222CCED0170005DC17 /* Optional+IsNill.swift in Sources */,
 				9A6EAF232CCED0170005DC17 /* BaseViewController.swift in Sources */,
@@ -554,9 +582,13 @@
 				9A6EAF2F2CCED0170005DC17 /* AlertPresentable.swift in Sources */,
 				9A6EAF5E2CCEF32A0005DC17 /* RegisterViewModel.swift in Sources */,
 				9A6EAF302CCED0170005DC17 /* UIApplication+TopMostViewController.swift in Sources */,
+				9AEFD26F2CCFE3BA00FC60BD /* SignOutRequestable.swift in Sources */,
 				9A6EAF312CCED0170005DC17 /* StatusBarStyleNavigationController.swift in Sources */,
 				9A6EAED62CCECEB00005DC17 /* AppDelegate.swift in Sources */,
 				9A6EAED72CCECEB00005DC17 /* SceneDelegate.swift in Sources */,
+				9AEFD2672CCFD9BF00FC60BD /* HomeViewController.swift in Sources */,
+				9AEFD2682CCFD9BF00FC60BD /* HomeViewModel.swift in Sources */,
+				9AEFD2692CCFD9BF00FC60BD /* HomeWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

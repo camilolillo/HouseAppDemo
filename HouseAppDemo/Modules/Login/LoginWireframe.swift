@@ -6,7 +6,7 @@
 
 import UIKit
 
-typealias LoginDelegate = BaseModuleDelegate & RegisterModuleRequestable
+typealias LoginDelegate = BaseModuleDelegate & RegisterModuleRequestable & RestartAppRequestable
 
 enum LoginWireframe {
     static func createModule(with delegate: LoginDelegate) -> UIViewController {

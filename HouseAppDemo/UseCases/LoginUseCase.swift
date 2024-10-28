@@ -55,7 +55,7 @@ extension LoginUserUseCase {
     private func saveUserToUserDefaults(_ user: User) {
         let defaults = UserDefaults.standard
         if let encodedUser = try? JSONEncoder().encode(user) {
-            defaults.set(encodedUser, forKey: "currentUser")
+            defaults.set(encodedUser, forKey: .currentUser)
         }
     }
 }

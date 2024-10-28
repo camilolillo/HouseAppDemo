@@ -21,5 +21,9 @@ extension String {
     static let registrationSuccessMessage = "Registro exitoso"
     static let loginSuccessMessage = "Login exitoso"
     static let loginErrorMessage = "Ocurrió un problema en el inicio de sesión, revisa tus credenciales."
+    static let signOutSuccessMessage = "Cierre de sesión exitoso"
+    
+    //UserDefaults keys
+    static let currentUser = "currentUser"
 }
 
