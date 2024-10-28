@@ -17,28 +17,23 @@ extension BaseViewController {
 extension BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        defer { print("\(Self.self).\(#function)") }
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        defer { print("\(Self.self).\(#function)") }
         super.viewDidAppear(animated)
     }
 
     override func viewWillLayoutSubviews() {
-        defer { print("\(Self.self).\(#function)") }
         super.viewWillLayoutSubviews()
     }
 
     override func viewDidLayoutSubviews() {
-        defer { print("\(Self.self).\(#function)") }
         super.viewDidLayoutSubviews()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        defer { print("\(Self.self).\(#function)") }
         super.viewWillDisappear(animated)
     }
 }

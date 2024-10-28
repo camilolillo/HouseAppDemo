@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-typealias SplashDelegate = BaseModuleDelegate & LoginModuleRequestable
+typealias SplashDelegate = BaseModuleDelegate & LoginModuleRequestable & HomeModuleRequestable
 
 enum SplashWireframe {
     static func createModule(with delegate: SplashDelegate) -> UIViewController {
@@ -16,7 +16,7 @@ enum SplashWireframe {
         let viewModel = SplashViewModel()
         
         view.viewModel = viewModel
-        viewModel.view = view
+        viewModel.view = view 
         viewModel.delegate = delegate
         
         return view

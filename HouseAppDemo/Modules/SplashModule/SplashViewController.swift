@@ -8,7 +8,7 @@
 import Foundation
 
 final class SplashViewController: BaseViewController {
-    var viewModel: SplashViewModelProtocol?
+    var viewModel: SplashViewModel?
 }
 
 extension SplashViewController {
@@ -17,5 +17,3 @@ extension SplashViewController {
         viewModel?.onViewDidLoad()
     }
 }
-
-extension SplashViewController: SplashViewProtocol { }

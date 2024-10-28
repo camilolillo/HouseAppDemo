@@ -7,9 +7,77 @@
 
 import Foundation
 
-final class RegisterViewModel {
-    weak var view: RegisterViewProtocol?
-    weak var delegate: RegisterDelegate?
+struct RegisterForm {
+    var email: String?
+    var password: String?
+    var confirmPassword: String?
 }
 
-extension RegisterViewModel: RegisterViewModelProtocol { }
+final class RegisterViewModel {
+    weak var view: RegisterViewController?
+    weak var delegate: RegisterDelegate?
+    
+    private var registerForm = RegisterForm()
+    private let registerUserUseCase: RegisterUserUseCaseProtocol
+    
+    var onLoadingStateChange: ((Bool) -> Void)?
+    var onErrorMessageChange: ((String?) -> Void)?
+    var onSuccessMessageChange: ((String) -> Void)?
+    var onEmailChange: ((String) -> Void)?
+    var onPasswordChange: ((String) -> Void)?
+    var onConfirmPasswordChange: ((String) -> Void)?
+    var onSuccessAction: (() -> Void)?
+    
+    init(registerUserUseCase: RegisterUserUseCaseProtocol) {
+        self.registerUserUseCase = registerUserUseCase
+        setupBindings()
+    }
+    
+    private func setupBindings() {
+        onEmailChange = { [weak self] email in
+            self?.registerForm.email = email
+        }
+        
+        onPasswordChange = { [weak self] password in
+            self?.registerForm.password = password
+        }
+        
+        onConfirmPasswordChange = { [weak self] confirmPassword in
+            self?.registerForm.confirmPassword = confirmPassword
+        }
+    }
+    
+}
+
+extension RegisterViewModel {
+    func onRegisterButtonPressed() {
+        onLoadingStateChange?(true)
+        validateCredentials()
+    }
+    func validateCredentials() {
+        guard
+            let email = registerForm.email, !email.isEmpty,
+            let password = registerForm.password, !password.isEmpty,
+            let confirmPassword = registerForm.confirmPassword, !confirmPassword.isEmpty else {
+                onErrorMessageChange?(.completeFieldsMessage)
+                onLoadingStateChange?(false)
+                return
+        }
+        guard password.elementsEqual(confirmPassword) else {
+            onErrorMessageChange?(.passwordsDoNotMatchMessage)
+            onLoadingStateChange?(false)
+            return
+        }
+        registerUserUseCase.execute(email: email, password: password) { success, message in
+            self.onLoadingStateChange?(false)
+            if success {
+                self.onSuccessMessageChange?(.registrationSuccessMessage)
+                self.onSuccessAction = {
+                    self.delegate?.onDismissRequested()
+                }
+            } else {
+                self.onErrorMessageChange?(.defaultAlertTitle)
+            }
+        }
+    }
+}
