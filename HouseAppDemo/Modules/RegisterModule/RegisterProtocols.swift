@@ -8,4 +8,7 @@ import Foundation
 
 protocol RegisterViewProtocol: AnyObject { }
 
-protocol RegisterViewModelProtocol: ViewLifecycleable { }
+protocol RegisterViewModelProtocol: ViewLifecycleable {
+    var onLoadingStateChange: ((Bool) -> Void)? { get set }
+    func onRegisterButtonPressed()
+}

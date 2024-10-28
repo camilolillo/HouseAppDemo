@@ -16,7 +16,7 @@ enum SplashWireframe {
         let viewModel = SplashViewModel()
         
         view.viewModel = viewModel
-        viewModel.view = view
+        viewModel.view = view 
         viewModel.delegate = delegate
         
         return view

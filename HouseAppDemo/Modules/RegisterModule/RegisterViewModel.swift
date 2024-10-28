@@ -6,10 +6,18 @@
 //
 
 import Foundation
+import Combine
 
 final class RegisterViewModel {
     weak var view: RegisterViewProtocol?
     weak var delegate: RegisterDelegate?
+    
+    var onLoadingStateChange: ((Bool) -> Void)?
+    
 }
 
-extension RegisterViewModel: RegisterViewModelProtocol { }
+extension RegisterViewModel: RegisterViewModelProtocol {
+    func onRegisterButtonPressed() {
+        onLoadingStateChange?(true)
+    }
+}

@@ -16,7 +16,7 @@ enum RegisterWireframe {
         let viewModel = RegisterViewModel()
         
         view.viewModel = viewModel
-        viewModel.view = view
+        viewModel.view = view 
         viewModel.delegate = delegate
         
         return view
