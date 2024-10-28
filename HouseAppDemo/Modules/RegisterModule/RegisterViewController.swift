@@ -27,6 +27,7 @@ final class RegisterViewController: BaseViewController {
         let indicator = UIActivityIndicatorView(style: .medium)
         indicator.translatesAutoresizingMaskIntoConstraints = false
         indicator.hidesWhenStopped = true
+        indicator.color = .white
         return indicator
     }()
 
@@ -38,6 +39,7 @@ final class RegisterViewController: BaseViewController {
     }
     
     private func setupUI() {
+        view.backgroundColor = .white
         view.addSubview(registerButton)
         registerButton.addSubview(activityIndicator)
     }
