@@ -110,6 +110,24 @@ final class RegisterViewController: BaseViewController {
         viewModel?.onLoadingStateChange = { [weak self] isLoading in
             self?.updateButtonState(isLoading: isLoading)
         }
+        viewModel?.onErrorMessageChange = { [weak self] message in
+            guard let message = message else { return }
+            self?.showAlert(message: message, action: nil)
+        }
+        viewModel?.onSuccessMessageChange = { [weak self] successMessage in
+            self?.showAlert(message: successMessage) {
+                self?.viewModel?.onSuccessAction?()
+            }
+        }
+    }
+}
+
+extension RegisterViewController {
+    private func showAlert(message: String, action: (() -> Void)?) {
+        let alert = UIAlertController(title: "Info", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in action?() }
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
     
     private func updateButtonState(isLoading: Bool) {

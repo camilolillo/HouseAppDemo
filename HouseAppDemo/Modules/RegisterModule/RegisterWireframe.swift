@@ -12,8 +12,9 @@ typealias RegisterDelegate = BaseModuleDelegate
 
 enum RegisterWireframe {
     static func createModule(with delegate: RegisterDelegate) -> UIViewController {
+        let registerUseCase = RegisterUserUseCase()
         let view = RegisterViewController()
-        let viewModel = RegisterViewModel()
+        let viewModel = RegisterViewModel(registerUserUseCase: registerUseCase)
         
         view.viewModel = viewModel
         viewModel.view = view 
